@@ -2,6 +2,7 @@
 CP1, CP2 클래스는 프로그램의 실행 흐름을 담당하며, 사용자로부터 입력을 받아 Calculator 객체를 사용해 계산을 수행하고 그 결과를 처리하는 역할을 합니다.
 ![image](https://github.com/user-attachments/assets/945edcf0-5ce7-4d24-8d20-2d7936bb90cf)
 위에서 Calculator 객체를 생성하여 사용자 입력을 처리할 준비를 합니다. Scanner 객체를 사용하여 사용자로부터 입력을 받는 부분입니다
+
 ![image](https://github.com/user-attachments/assets/34fc601d-b4a1-402a-86e1-fb14e7298dc9)
 while (true) 루프는 프로그램이 계속 실행되도록 구현하였고, 제가 "Exit"을 입력하면 루프가 종료되어 프로그램이 종료됩니다. 이 부분은 프로그램 종료에 대한 흐름을 제어하는데 중요한 코드입니다!
 ![image](https://github.com/user-attachments/assets/406578d4-337c-4c3b-98d7-32555e7bcb8f)
