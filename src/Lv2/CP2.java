@@ -45,7 +45,11 @@ public class CP2 {
 
             System.out.print("원하시는 계산에 필요한 사칙연산 기호를 입력해주세요 (+, -, *, /): ");
             char operator = sc.nextLine().charAt(0);
-            calculator.setOperator(operator);
+            if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
+                System.out.println("잘못된 연산자입니다. 다시 입력해주세요.");
+                continue;
+            }
+            calculator.setOperator(operator); // 연산자 설정
 
             // Calculator 클래스를 사용하여 계산 수행햇습니다
             int answer = calculator.calculate();
