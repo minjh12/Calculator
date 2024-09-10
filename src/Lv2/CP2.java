@@ -18,13 +18,30 @@ public class CP2 {
                 break;
             }
 
-            int num1 = Integer.parseInt(input1);
+            // 첫번째 숫자가 올바르지 못할때 예외처리입니다
+            int num1 = 0;
+            try {
+                num1 = Integer.parseInt(input1);
+            } catch (NumberFormatException e) {
+                System.out.println("잘못된 숫자 입력입니다. 다시 시도해주세요.");
+                continue;
+            }
             calculator.setFirstnumber(num1);
-                     System.out.print("두 번재 숫자를 입력해주세요: ");
-            int num2 = sc.nextInt();
+
+            System.out.print("두 번째 숫자를 입력해주세요: ");
+            String input2 = sc.nextLine();
+
+            // 두번째 숫자가 올바르지 못할때 예외처리입니다
+
+            int num2 = 0;
+            try {
+                num2 = Integer.parseInt(input2);
+            } catch (NumberFormatException e) {
+                System.out.println("잘못된 숫자 입력입니다. 다시 시도해주세요.");
+                continue;
+            }
             calculator.setSecondnumber(num2);
 
-            sc.nextLine();
 
             System.out.print("원하시는 계산에 필요한 사칙연산 기호를 입력해주세요 (+, -, *, /): ");
             char operator = sc.nextLine().charAt(0);
@@ -41,12 +58,12 @@ public class CP2 {
                 System.out.println("프로그램을 종료하겠습니다.");
                 break;
             } else if (command.equalsIgnoreCase("remove")) {
-                // 가장 먼저 저장된 결과 삭제
+                // 가장 먼저 저장된 결과를 삭제하는 부분입니다.
                 calculator.removeFirstResult();
                 System.out.println("첫번쨰로 한 계산 결과가 삭제되었습니다.");
             }
 
-            // Setter 메서드를 사용하여 새로운 리스트를 설정
+            // Setter 메서드를 사용하여 새로운 리스트를 설정했습니다
             calculator.setResults(answer);
             List<Integer> results1 = calculator.getResults();
             for (Integer i : results1) {

@@ -27,12 +27,12 @@ public class Calculator {
         this.operator = operator;
     }
 
-    // 생성자에서 리스트 초기화
+    // 생성자에서 리스트 초기화하는 메서드부분입니다
     public Calculator() {
         results = new ArrayList<>();
     }
 
-    // 사칙연산 수행 후 결과 반환하는 메서드
+    // 사칙연산 수행 후 결과 반환하는 메서드부분입니다
     public int calculate() {
         int result = 0;
 
